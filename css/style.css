@@ -1,0 +1,2017 @@
+/*========== COLORES ==========*/
+:root {
+  --header-height: 2.5rem;
+
+  --body-color: hsl(0, 0%, 100%);
+  --first-color: hsl(29, 96%, 49%);
+  --title-color: hsl(252, 4%, 23%);
+  --white-color: hsl(0, 0%, 100%);
+  --grey-color: hsl(225, 12%, 24%);
+  --first-gradient: linear-gradient(
+    90deg,
+    hsl(34, 84%, 64%),
+    hsl(27, 98%, 64%)
+  );
+  --gray-border: hsl(255, 6%, 90%);
+  --container-color: hsl(0, 0%, 100%);
+
+  /*========== Fonts ==========*/
+  --normal-font-size: 0.938rem;
+
+  /*========== Spacing========= */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /*========= Container system ======== */
+  --container-padding: 10px;
+  --container-max-width: 1200px;
+  --gap-sm: 20px;
+  --gap-lg: 30px;
+
+  /*============ Card system============ */
+  --card-shadow: 5px 5px 0px 0px hsl(240 25% 50% / 0.2);
+  --card-radius: 8px;
+  --card-padding: 10px;
+}
+
+
+/*========== Sistema de Tipografia========= */
+.title-primary {
+  font-family: "Inter";
+  color: var(--grey-color);
+  font-size: 1.3em;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.title-secondary {
+  font-family: "Inter";
+  color: var(--grey-color);
+  font-size: 1.3em;
+  letter-spacing: 0.5px;
+  margin: 0.5rem 0;
+  text-align: center;
+  font-weight: 800;
+}
+
+.text-body {
+  font-family: "Montserrat";
+  color: hsl(240, 2%, 37%);
+  font-size: 0.9em;
+  margin: 0;
+  padding: 0;
+}
+
+.text-body--center {
+  text-align: center;
+}
+
+/*==============ACTIVE LINK===============*/
+.active-link {
+  /*este porque no agarra??*/
+  color: var(--grey-color);
+}
+
+/*=============BASE=============*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: var(--normal-font-size);
+  background-color: var(--white-color);
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*CSS RESUSABLE*/
+
+.section-container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: var(--spacing-sm) auto;
+  padding: 0 var(--container-padding);
+}
+
+.card-base {
+  background-color: var(--white-color);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--card-shadow);
+  position: static;
+  width: 100%;
+  height: auto;
+  font-size: 0.8rem;
+}
+
+.img-container-base {
+  background-size: cover;
+  background-position: center center;
+  border-radius: var(--card-radius);
+  margin-bottom: var(--spacing-sm);
+  width: 100%;
+  height: 150px;
+}
+
+.container {
+  max-width: 1920px;
+  margin-inline: 1.6rem;
+}
+
+/*=============HEADER=================*/
+
+/*----------COLORES DEL BARS---------*/
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0%;
+  background-color: var(--first-color);
+  z-index: 100;
+  transition: background-color 0.4s;
+}
+
+.nav {
+  position: relative;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo1 {
+  width: 110px;
+  margin: 5px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  column-gap: 0.25rem;
+}
+
+.nav__toggle,
+.nav__close {
+  font-size: 1.5rem;
+  color: var(--white-color);
+  cursor: pointer;
+  transition: color 0.4s;
+}
+
+.nav__link {
+  font-family: "Montserrat";
+  font-weight: 600;
+}
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1020px) {
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: rgb(226, 113, 21);
+    width: 50%;
+    height: 40%;
+    padding: 2.3rem 1rem;
+    border-left: 2px solid var(--first-color);
+    transition: right 0.4s;
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.nav__link {
+  color: var(--white-color);
+  transition: color 0.4s;
+}
+
+.nav__link:hover {
+  color: var(--grey-color);
+}
+
+.nav__close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+/* Show menu */
+.show-menu {
+  right: 0;
+}
+
+/* Change background header */
+.bg-header {
+  background-color: var(--white-color);
+}
+
+.bg-header .nav__toggle {
+  color: var(--title-color);
+}
+
+/*BOTONES*/
+.button1 {
+  display: inline-flex;
+  background: var(--first-gradient);
+  color: var(--white-color);
+  padding: 1rem 2rem;
+  transition: box-shadow 0.4s;
+}
+
+.button1:hover {
+  box-shadow: 0 8px 32px hsla(16, 15%, 15%, 0.3);
+  color: var(--white-color);
+}
+
+/*=============INICIO=================*/
+#section-inicio {
+  display: flex;
+  align-items: flex-start;
+  justify-content: end;
+  text-align: start;
+  flex-direction: column;
+  background-image: url(/images/Banner2_max_aceros.png);
+  background-repeat: no-repeat;
+  background-size: cover; /*OCUPE TODO EL ESPACIO DISPONIBLE */
+  background-position: center center; /*LA IMAGEN SIEMPRE QUEDA CENTRADA */
+  height: 520px;
+}
+
+.home__title {
+  color: var(--first-color);
+  font-family: "Inter";
+  font-size: 3.3em;
+  letter-spacing: 2px;
+  text-shadow: 3px 2px 5px #1b1a1a;
+  font-weight: 100;
+}
+
+.home__description {
+  font-family: "Montserrat";
+  font-weight: 100;
+  color: var(--white-color);
+  font-size: 1em;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 9px #000000;
+  margin-bottom: 15px;
+}
+
+.home__data {
+  margin-bottom: 2em;
+}
+
+/*=============NOSOTROS=================*/
+.titulo_section {
+  color: var(--title-color);
+  font-family: "Inter";
+  font-size: 2.3em;
+  letter-spacing: 2px;
+  text-align: center;
+  justify-content: center;
+  margin: 10px 0;
+  font-weight: 100;
+}
+
+#about .about__container {
+  text-align: left;
+  background-color: var(--first-color);
+}
+
+#about .text-container {
+  padding: 30px 0;
+  margin: auto auto;
+  max-width: 1200px;
+}
+
+#about h3 {
+  font-family: "Inter";
+  color: var(--white-color);
+  font-size: 1.7em;
+  letter-spacing: 1px;
+  font-weight: 100;
+  margin-left: 15px;
+}
+
+#about p {
+  font-family: "Inter";
+  color: var(--white-color);
+  font-size: 0.8rem;
+  margin-left: 15px;
+}
+
+/*=============== PRODUCTOS ===============*/
+
+.productos {
+  position: relative;
+}
+
+.productos__container {
+  position: relative;
+  row-gap: 3rem;
+}
+
+.section__subtitle {
+  color: var(--first-color);
+  font-family: "Inter";
+  font-size: 2rem;
+  letter-spacing: 2.5px;
+  text-align: center;
+  justify-content: center;
+}
+
+.section__subtitle-2 {
+  color: var(--grey-color);
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: .8rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+  justify-content: center;
+}
+
+.productos__card {
+  width: 350px;
+  height: 470px;
+  background-color: var(--first-color);
+  border: 2px solid var(--gray-border);
+  background-clip: content-box;
+  transition: border-color 0.4s;
+}
+
+.productos__card:hover {
+  border-color: var(--first-color);
+}
+
+.productos__data {
+  padding: 2rem 2rem 2rem;
+}
+
+.productos__title {
+  margin-block: 0.5rem;
+  color: var(--white-color);
+  font-family: "Montserrat";
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+#productos p {
+  font-size: 0.8rem;
+  color: var(--gray-border);
+  font-family: "Montserrat";
+  letter-spacing: 0.1rem;
+  text-align: center;
+  justify-content: center;
+}
+
+#tuberias p {
+  font-size: 0.8rem;
+  color: var(--gray-border);
+  font-family: "Montserrat";
+  letter-spacing: 0.1rem;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Swiper class */
+#productos .productos__swiper {
+  margin-inline: initial;
+  padding-bottom: 4rem;
+}
+
+#productos .swiper-button-prev::after,
+#productos .swiper-button-next::after {
+  content: "";
+}
+
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-button-prev-1,
+.swiper-button-next-1 {
+  top: initial;
+  bottom: 0;
+  width: 46px;
+  height: 46px;
+  background-color: var(--container-color);
+  box-shadow: 0 2px 8px hsla(255, 8%, 4%, 0.1);
+  border-radius: 50%;
+  font-size: 2.2rem;
+  color: transparent;
+}
+
+.swiper-button-prev {
+  left: calc(50% - 3rem);
+}
+
+.swiper-button-next {
+  right: calc(50% - 3rem);
+}
+
+/* Swiper class2 */
+#tuberias .productos__swiper2 {
+  margin-inline: initial;
+  padding-bottom: 4rem;
+}
+
+#tuberias .swiper-button-prev2::after,
+#tuberias .swiper-button-next2::after {
+  content: "";
+}
+.swiper-button-prev2,
+.swiper-button-next2,
+.swiper-button-prev-2,
+.swiper-button-next-2 {
+  top: initial;
+  bottom: 0;
+  width: 46px;
+  background-color: var(--container-color);
+  box-shadow: 0 2px 8px hsla(255, 8%, 4%, 0.1);
+  border-radius: 50%;
+  font-size: 2.2rem;
+  color: transparent;
+}
+
+#tuberias .swiper-button-prev2 {
+  left: calc(50% - 3rem);
+}
+
+#tuberias .swiper-button-next2 {
+  right: calc(50% - 3rem);
+}
+
+/*=============CATEGORIA=================*/
+
+#categoria {
+  display: flex;
+  text-align: start;
+  flex-direction: column;
+  background-image: url(/images/Banner_max_aceros.png);
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center center;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  min-height: 400px;
+  height: auto;
+}
+
+.img-container--categoria1 {
+  background-image: url("/images/Imagen1_sola_max_aceros.png");
+}
+.flex-container {
+  display: flex;
+  background-color: var(--white-color);
+}
+.flex-container--column {
+  flex-direction: column;
+}
+
+.category-main .title-primary {
+  margin-bottom: 15px;
+  margin-top: 0.7em;
+  margin-left: 1em;
+}
+
+.category-main .text-body {
+  font-size: 1em;
+  margin-right: 4em;
+  margin-left: 15px;
+  margin-top: 0;
+}
+
+.icono-lista li {
+  background: url("https://maxaceros.com/images/Bineta_max_aceros.png")
+    no-repeat left center;
+  background-size: 20px 20px;
+  padding-left: 31px;
+  margin-bottom: 0.8rem;
+}
+
+/*------SEGUNDA PARTE DE TARJETAS------*/
+.categoria__content2 {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 15px 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.card-text {
+  width: 100%;
+  padding: 0 5px;
+  text-align: left;
+}
+
+.img-container--categoria2 {
+  background-image: url("/images/Imagen2_sola_max_aceros.png");
+}
+.img-container--categoria3 {
+  background-image: url("/images/Imagen3_sola_max_aceros.png");
+}
+.img-container--categoria4 {
+  background-image: url("/images/Imagen4_sola_max_aceros.png");
+}
+.img-container--categoria5 {
+  background-image: url("/images/Imagen5_sola_max_aceros.png");
+}
+.img-container--categoria6 {
+  background-image: url("/images/Imagen6_sola_max_aceros.png");
+}
+
+.icono-lista2 li {
+  background: url("https://maxaceros.com/images/Bineta_max_aceros.png")
+    no-repeat left center;
+  background-size: 15px 15px;
+  padding-left: 25px;
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.text-container2 {
+  width: 100%;
+  padding: 0 5px;
+}
+
+/*======PARTRE FINAL DE CATEGORIA========*/
+
+.categoria__data2 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 5rem auto;
+  padding: 0 10px;
+}
+
+.card2 {
+  position: relative;
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  font-size: 0.8rem;
+  box-shadow: 5px 5px 0px 0px hsl(240 25% 50% / 0.2);
+  border-radius: 8px;
+}
+
+.card__rightf {
+  top: 20px;
+  left: 0;
+  position: static;
+}
+
+.icono-listaf li {
+  background: url("https://maxaceros.com/images/Bineta_max_aceros.png")
+    no-repeat left center;
+  background-size: 20px 20px;
+  padding-left: 31px;
+  margin-bottom: 0.8rem;
+}
+
+/*===================NUESTROS CLIENTES=================*/
+.containerclientes {
+  width: 100%;
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 20px 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.clientes__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.client-card {
+  min-height: 120px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flex-container--center {
+  align-items: center;
+  justify-content: center;
+}
+
+/*------tarjeta------*/
+
+.card__clientes2 {
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.img-container--cliente1 {
+  background-image: url("/images/Logo_marca1_max_aceros.png");
+}
+
+.img-container--cliente2 {
+  background-image: url("/images/Logo_marca2_max_aceros.png");
+}
+
+.img-container--cliente3 {
+  background-image: url("/images/Logo_marca3_max_aceros.png");
+}
+.img-container--cliente4 {
+  background-image: url("/images/Logo_marca4_max_aceros.png");
+}
+.img-container-clientes5 {
+  background-image: url("/images/Logo_marca5_max_aceros.png");
+}
+
+.img-container--cliente1,
+.img-container--cliente2,
+.img-container--cliente3,
+.img-container--cliente4 {
+  width: 100%;
+  max-width: 280px;
+  height: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.img-container-clientes5 {
+  width: 100%;
+  max-width: 200px;
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/*=============CONTACTO============================*/
+#contacto {
+  background-color: #e97509;
+  padding: 15px 10px;
+  max-width: 100%;
+}
+.contacto-title {
+  color: var(--white-color);
+  font-family: "Inter";
+  font-size: 1.7em;
+  letter-spacing: 1.5px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.contacto-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap-sm);
+  align-items: start;
+  padding: 0 var(--container-padding);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  order: 1;
+  max-width: 100%;
+  width: 94%;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: span 1;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: none;
+  font-size: 11px;
+  background-color: white;
+  font-family: "Montserrat";
+  border-radius: 4px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.btn-enviar {
+  font-family: "Montserrat";
+  background-color: #534a4a;
+  color: var(--white-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 14px;
+  margin-top: 15px;
+  letter-spacing: 1px;
+  width: 100%;
+  max-width: 200px;
+  align-self: center;
+}
+
+.btn-enviar:hover {
+  background-color: #232d36;
+}
+
+/* Lado del mapa */
+.mapa-lado {
+  display: flex;
+  flex-direction: column;
+  order: 2;
+}
+
+.mapa-container {
+  background-color: #e8e8e8;
+  border-radius: 8px;
+  height: 250px;
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mapa-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+/* Información de contacto */
+.info-contacto {
+  color: rgb(238, 231, 231);
+  font-family: "Montserrat";
+  font-size: 14px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.info-item .icon-placeholder {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-right: 12px;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  flex-shrink: 0;
+}
+
+.info-item .icon-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.g-recaptcha {
+  transform: scale(0.85); /* Ajusta este valor según el tamaño deseado */
+  transform-origin: 0 0; /* Asegura que el origen del escalado sea desde la esquina superior izquierda */
+}
+
+@media (max-width: 768px) {
+  /* Para pantallas pequeñas */
+  .g-recaptcha {
+    transform: scale(0.75); /* Escala para dispositivos más pequeños */
+    transform-origin: 0 0;
+  }
+}
+
+/*================FOOTER======================*/
+#footer {
+  background-color: #ec6307;
+  padding: 15px 40px;
+  max-width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-lado img {
+  height: 50px;
+  margin-left: 4em;
+}
+
+.luminel-lado {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+}
+
+.letra-container {
+  font-family: "Montserrat";
+  color: #f0e6e6;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.logo-luminel img {
+  height: 5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .logo-lado img {
+    height: 35px;
+    margin-left: 0;
+  }
+
+  .luminel-lado {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .letra-container p {
+    font-size: 14px;
+  }
+
+  .logo-luminel img {
+    height: 5rem;
+  }
+}
+
+/*============SEGUNDA PARTE DEL FOOTER======================*/
+.footer2-container {
+  background-color: #f5efef;
+  padding: 20px;
+}
+.logos-continuos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.logos-continuos img {
+  max-height: 40px; /* tamaño uniforme */
+  width: auto; /* mantiene proporción */
+  object-fit: contain; /* evita distorsión */
+}
+
+/*========PARA DISPOSITIVOS PEQUEÑOS=========*/
+@media screen and (max-width: 320px) {
+    .home__title{
+        font-weight: 700;
+        font-size: 2.7em;
+        letter-spacing: 1px;
+    }
+    .home__description{
+        font-weight: 500;
+    }
+  .titulo_section {
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  .section__subtitle {
+    margin-top: 15px;
+    letter-spacing: 0;
+    font-size: 1.8em;
+    font-weight: 800;
+  }
+
+  /*============NOSOTROS==============*/
+  #about h3{
+    font-size: 1.6em;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+  /*===========PRODUCTOS===========*/
+  #productos .productos__swiper {
+    padding-bottom: 0;
+  }
+
+  .productos__card {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    height: 400px;
+  }
+
+  .productos__data {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .productos__title {
+    text-align: center;
+  }
+
+  /*boton alineado en el card de img y no en el data*/
+  #tuberias .productos__swiper2 {
+    padding-bottom: 0;
+  }
+
+  /*tamaño de los botones*/
+  .swiper-button-prev,
+  .swiper-button-next,
+  .swiper-button-prev-1,
+  .swiper-button-next-1 {
+    width: 40px;
+    height: 40px;
+  }
+
+  .swiper-button-prev .fa-angles-left {
+    margin-left: 8px;
+    font-size: 23px;
+  }
+
+  .swiper-button-next .fa-angles-right {
+    margin-left: 10px;
+    font-size: 23px;
+  }
+
+  .title-secondary{
+    font-weight: 800;
+  }
+  /*===========PARTE FINAL DE CATEGORIA===========*/
+
+  #categoria__containerf .title-secondary {
+    font-size: 1.5em;
+  }
+
+  /*===========FORMULARIO===========*/
+  .contacto-title{
+    font-size: 1.5em;
+    letter-spacing: 0px;
+    font-weight: 600;
+  }
+  .btn-enviar {
+    max-width: 100px;
+  }
+  .info-item {
+    font-size: 11px;
+  }
+
+  .mapa-lado {
+    max-width: 100%;
+    width: 94%;
+  }
+
+  /*===========FOOTER===========*/
+  .logo-lado img {
+    height: 25px;
+  }
+
+  .letra-container p {
+    font-size: 9px;
+  }
+
+  .logo-luminel img {
+    height: 4rem;
+  }
+
+  .logos-continuos img {
+    max-height: 15px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+
+    /*===========INICO===========*/
+    .home__title{
+        font-size: 3.1em;
+         letter-spacing: 0;
+        font-weight: 700;
+    }
+    .home__description{
+        font-weight: 600;
+    }
+    .titulo_section {
+    font-size: 1.6em;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+
+  /*============NOSOTROS==========*/
+  #about h3{
+    font-size: 1.6em;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+  .section__subtitle{
+    font-size: 1.5rem;
+    letter-spacing: 0px;
+    font-weight: 800;
+  }
+
+  /*===========PRODUCTOS===========*/
+  #productos .section__subtitle-2{
+    font-size: .8rem;
+    font-weight: 600;
+  }
+  .h3--bot{
+    margin-top: 15px;
+  }
+  #productos .productos__img {
+    height: 240px;
+  }
+
+  #productos .productos__card {
+    height: 405px;
+    width: 85%;
+    left: 26px;
+    margin: 0 auto;
+  }
+
+  #productos .productos__data {
+    padding: 1rem 0 2rem 0.5rem;
+  }
+ #tuberias .section__subtitle-2{
+    font-size: .8rem;
+    font-weight: 600;
+  }
+  #tuberias .productos__img {
+    height: 240px;
+  }
+  #tuberias .productos__card {
+    height: 405px;
+    width: 85%;
+    left: 26px;
+    margin: 0 auto;
+  }
+
+  #tuberias .productos__swiper2 {
+    margin-bottom: -60px;
+  }
+
+  #tuberias .productos__data {
+    padding: 1rem 0 2rem 0.5rem;
+  }
+
+  .swiper-button-prev .fa-angles-left {
+    margin-left: 12px;
+    font-size: 25px;
+  }
+
+  .swiper-button-next .fa-angles-right {
+    margin-left: 12px;
+    font-size: 25px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next,
+  .swiper-button-prev-1,
+  .swiper-button-next-1 {
+    width: 40px;
+    height: 40px;
+  }
+
+  .swiper-horizontal {
+    .swiper-button-next,
+    .swiper-button-prev,
+    ~ .swiper-button-next,
+    ~ .swiper-button-prev {
+      margin-left: 30px;
+      margin-top: calc(0px - var(--swiper-navigation-size) / 2);
+      top: var(--swiper-navigation-top-offset, 45%);
+      margin-right: 25px;
+    }
+  }
+  /*===========PARTE FINAL DE CATEGORIA===========*/
+
+  #categoria__containerf .title-secondary {
+    font-size: 1.5em;
+  }
+
+  .card-base {
+    width: 74%;
+    margin: 0 auto;
+  }
+
+  /*===========FOOTER===========*/
+  .logo-lado img {
+    height: 25px;
+  }
+
+  .letra-container p {
+    font-size: 11px;
+  }
+
+  .logo-luminel img {
+    height: 4rem;
+  }
+
+  .logos-continuos img {
+    max-height: 15px;
+  }
+}
+@media screen and (min-width: 393px){
+/*===========INICO===========*/
+    #productos .productos__card {
+    height: 405px;
+    width: 82%;
+    left: 26px;
+    margin: 0 auto;
+  }
+  #tuberias .productos__card {
+    height: 405px;
+    width: 82%;
+    left: 26px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  /*===========INICO===========*/
+  .home__title {
+    font-size: 4em;
+  }
+  /*===========NOSOTROS===========*/
+  #about p {
+    font-size: 0.9rem;
+  }
+  /*===========PRODUCTOS===========*/
+  #productos .productos__img {
+    height: 240px;
+  }
+  #productos .productos__card {
+    height: 410px;
+    width: 75%;
+    left: 45px;
+    margin: 0 auto;
+  }
+  #tuberias .productos__img {
+    height: 240px;
+  }
+  #tuberias .productos__card {
+    height: 410px;
+    width: 75%;
+    left: 45px;
+    margin: 0 auto;
+  }
+
+  /*======FORMULARIO===========*/
+  .form-group {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .btn-enviar {
+    margin: 0 93px;
+  }
+
+  .g-recaptcha {
+    margin-left: 35px;
+  }
+  /*===========FOOTER===========*/
+  .logos-continuos img {
+    max-height: 14px;
+  }
+}
+
+/*========================PARA DISPOSITIVOS MEDIOS================*/
+@media screen and (min-width: 768px) {
+  /*==========NOSOTROS===========*/
+    .titulo_section {
+        font-size: 2.1em;
+         font-weight: 800;
+        letter-spacing: 0;
+    }
+  .about__container {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  #about .text-container {
+    max-width: 50%;
+    text-align: initial;
+    flex: 1;
+    width: auto;
+    padding-left: 0;
+    padding-right: var(--spacing-lg);
+    order: 1; /* Asegura que el texto esté a la derecha si es necesario */
+  }
+
+  #about .h3--top {
+    margin-top: -4em;
+  }
+  #about h3 {
+    margin-top: 2em;
+    margin-left: 1.5em;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  #about p {
+    margin-left: 2em;
+    margin-top: 7px;
+  }
+  #about .img-container {
+    background-image: url("/images/Banner3_max.PNG");
+    background-size: cover;
+    background-position: center center;
+    flex: 1;
+    width: auto;
+    height: 500px;
+    order: 1;
+  }
+
+  /*========PRODUCTOS PRINCIPALES=============*/
+  #productos p{
+   font-size: .7rem;
+  }
+  #tuberias p{
+   font-size: .7rem;
+  }
+  .productos__title{
+    font-size: .9rem;
+  }
+  #productos .productos__img {
+    height: 279px;
+  }
+  #productos .productos__card {
+    height: 410px;
+    width: 43%;
+    left: 22px;
+    margin: 0 17px;
+  }
+
+  #tuberias .productos__img {
+    height: 279px;
+  }
+  #tuberias .productos__card {
+    height: 410px;
+    width: 43%;
+    left: 22px;
+    margin: 0 17px;
+  }
+
+  /*========CATEGORIA PRODUCTOS=============*/
+  #categoria {
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    background-image: url(/images/Banner_max_aceros.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    align-items: end;
+    justify-content: end;
+    padding: 1rem 0;
+    min-height: 400px;
+    height: 424px;
+  }
+
+  .section-container {
+    width: 100%;
+    max-width: var(--container-max-width); /**/
+    margin: var(--spacing-sm) auto;
+    padding: 0 var(--container-padding);
+    position: relative;
+    height: auto;
+  }
+
+  /*card creo*/
+  #categoria .card-base {
+    background-color: var(--white-color);
+    border-radius: var(--card-radius);
+    padding: var(--card-padding);
+    box-shadow: var(--card-shadow);
+    position: relative;
+    width: 120%;
+    height: auto;
+    font-size: 0.8rem;
+    right: 24%;
+  }
+  .category-main .title-primary {
+    margin-bottom: 15px;
+    margin-top: 0.7em;
+    margin-left: 1em;
+  }
+
+  .category-main .text-body {
+    font-size: 1em;
+    margin-right: 4em;
+    margin-left: 15px;
+    margin-top: 0;
+  }
+
+  /*imagen y texto de la tarjeta*/
+  .img-container--categoria1 {
+    background-image: url("/images/Imagen1_sola_max_aceros.png");
+    margin: 0;
+    height: 189px;
+    width: 71%;
+  }
+  #categoria .flex-container {
+    display: flex;
+    background-color: var(--white-color);
+  }
+  #categoria .flex-container--column {
+    flex-direction: row;
+  }
+
+  /*segunda parte de categoria*/
+  #categoria__content2 .img-container-base {
+    margin: 0;
+    height: 189px;
+    width: 71%;
+  }
+  .flex-container {
+    display: flex;
+    background-color: var(--white-color);
+  }
+  .flex-container--column {
+    flex-direction: row;
+  }
+
+  #categoria__content2 .card-base {
+    position: relative;
+    width: 100%;
+    height: auto;
+    font-size: 0.8rem;
+  }
+  /* ==============PARTE FINAL DE CATEGORIA=========== */
+  #categoria__final {
+    display: flex;
+    align-items: flex-start;
+    justify-content: end;
+    text-align: start;
+    flex-direction: column;
+    height: 90vh;
+    background-image: url(/images/Banner4_max_aceros.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+  }
+
+  .categoria__data2 {
+    position: relative;
+    width: 700px;
+    height: 500px;
+    margin: 5em auto;
+    padding: 0;
+  }
+
+  .card2 {
+    position: relative;
+    width: 70%;
+    height: 270px;
+    padding: 15px 15px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    font-size: 0.9rem;
+    box-shadow: 15px 15px 0px 0px hsl(240 25% 50% / 0.2),
+      -15px 15px 0px 0px hsl(240 25% 50% / 0.2);
+  }
+
+  .card__rightf {
+    top: 200px;
+    left: 37%;
+    position: absolute; /* Cambiado de static a absolute para desktop */
+  }
+
+  .icono-lista li {
+    background: url("https://maxaceros.com/images/Bineta_max_aceros.png")
+    no-repeat left center;
+    background-size: 20px 20px;
+    padding-left: 31px;
+    margin-bottom: 0.8rem;
+  }
+
+  .categoria__content2 {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap-lg);
+  }
+
+  /*============NUESTROS CLIENTES==============*/
+
+  .containerclientes {
+    grid-template-columns: 2fr 1fr; /* Dos columnas: logos + tarjeta extra */
+    gap: 20px;
+    padding: 40px 0;
+    max-width: 1400px;
+    margin: 50px auto;
+  }
+
+  .clientes__content {
+    grid-template-columns: 1fr 1fr; /* Dos columnas para los logos */
+    gap: 20px;
+  }
+
+  #clientes .card-base {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .img-container--cliente1,
+  .img-container--cliente2,
+  .img-container--cliente3,
+  .img-container--cliente4 {
+    max-width: 280px;
+    height: 100px;
+  }
+
+  .img-container-clientes5 {
+    max-width: 250px;
+    height: 150px;
+  }
+
+  /* =============FORMULARIO CONTACTO =================*/
+
+  .contacto-container {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap-lg);
+  }
+
+  .contacto-section {
+    padding: 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1;
+  }
+
+  .btn-enviar {
+    margin: 0 35px;
+  }
+
+  .form-group.full-width {
+    grid-column: span 2;
+  }
+
+  /*=========FOOTER=========*/
+  .logos-continuos img {
+    max-height: 13px;
+  }
+  .mapa-container{
+    height: 317px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-inline: auto;
+  }
+
+  /*========NAV BARRA========*/
+  .nav {
+    height: calc(var(--header-height)+2rem);
+  }
+
+  .nav__toggle,
+  .nav__close {
+    display: none;
+  }
+  .nav__menu {
+    width: initial;
+  }
+  .nav__list {
+    flex-direction: row;
+    align-items: center;
+    column-gap: 4rem;
+  }
+
+  .button1 {
+    box-shadow: none;
+    background: none;
+  }
+
+  .bg-header .nav__link {
+    color: var(--title-color);
+  }
+
+  .bg-header .active-link,
+  .bg-header .nav__link:hover {
+    color: var(--first-color);
+  }
+
+  /*======INICIO=====*/
+  .home__data {
+    margin-right: 340px;
+  }
+  .home__title {
+    margin-left: .6em;
+    font-size: 3.9em;
+    font-weight: 800;
+  }
+  .home__description {
+    font-size: 1.4em;
+    margin-left: 1.8em;
+  }
+  /*======TITULOS=====*/
+  .titulo_section {
+    font-size: 2.8em;
+  }
+  /*=====NOSOTROS======*/
+
+  .about__container {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  #about .img-container {
+    background-image: url(/images/Banner3_max.PNG);
+    background-size: cover;
+    background-position: center center;
+    flex: 0 0 45%;
+    max-width: 45%;
+    width: 50%;
+    height: 400px;
+    order: 1;
+  }
+
+  #about h3 {
+    font-size: 2.3em;
+    margin-left: 0;
+  }
+  #about p {
+    font-size: 1.1rem;
+    margin-left: 0;
+    margin-top: 7px;
+  }
+
+  #about .text-container {
+    padding-bottom: 0px;
+    padding-top: 110px;
+  }
+
+  /*========PRODUCTOS PRINCIPALES=============*/
+  .section__subtitle{
+    font-size: 2.4rem;
+  }
+  #productos .section__subtitle-2 {
+        font-size: 1rem;
+  }
+  #productos .productos__img {
+    height: 250px;
+  }
+  #productos .productos__card {
+    height: 405px;
+    width: 28%;
+    left: 22px;
+    margin: 0 17px;
+  }
+
+  #tuberias .section__subtitle-2 {
+        font-size: 1rem;
+  }
+  #tuberias .productos__img {
+    height: 250px;
+  }
+  #tuberias .productos__card {
+    height: 405px;
+    width: 28%;
+    left: 22px;
+    margin: 0 17px;
+  }
+
+  /*===========CATEGORIA DE PRODUCTOS===========*/
+
+  #categoria .card-base {
+    right: 40%;
+    width: 135%;
+  }
+
+  .title-secondary {
+    font-size: 1.7em;
+    text-align: left;
+    margin-left: 24px;
+  }
+  #categoria__content2 .card-base {
+    width: 90%;
+  }
+
+  .text-body {
+    font-size: 1em;
+  }
+
+  .card__rightf {
+    top: 197px;
+    left: 50%;
+    width: 90%;
+    height: 60%;
+    position: absolute;
+  }
+
+  #categoria__containerf .title-secondary {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+  .text-container2 {
+    padding: 5px 5px;
+  }
+  .icono-lista li {
+    margin-bottom: 1.4rem;
+  }
+  .img-container--categoria1{
+    height: 230px;
+  }
+
+  /*============PARTE FINAL CATEGORIA==============*/
+  .section__subtitle-2{
+    font-size: 1.2rem;
+  }
+  
+  /*===========FORMULARIO========*/
+  .form-group input{
+    font-size: 13px;
+  }
+  .btn-enviar {
+    margin: 8px 48px;
+    max-width: 110px;
+  }
+
+  /*=========FOOTER=========*/
+  #footer {
+    padding: 15px 10px;
+  }
+  .letra-container p {
+    font-size: 13px;
+  }
+
+  .logo-luminel img {
+    height: 5rem;
+  }
+
+  .luminel-lado {
+    gap: 33px;
+  }
+
+  .logos-continuos img {
+    max-height: 19px;
+  }
+  .g-recaptcha {
+    margin-left: 45px;
+  }
+}
+
+@media screen and (min-width: 1280px){
+  .home__title {
+    margin-left: -3.4em;
+  }
+  .home__description{
+    margin-left: -9.3em;
+  }
+  #productos .productos__card {
+    height: 396px;
+    width: 22%;
+    left: 19px;
+    margin: 0 17px;
+  }
+  #tuberias .productos__card {
+    height: 396px;
+    width: 22%;
+    left: 19px;
+    margin: 0 17px;
+  }
+  
+
+  .card__rightf {
+    top: 54px;
+    left: 67%;
+    width: 112%;
+    height: 66%;
+    position: absolute;
+    }
+
+  .form-name{
+    width: 80%;
+    margin-left: 57px;
+  }
+  .form-estado{
+    margin-left: 57px;
+  }
+  .g-recaptcha {
+    margin-left: 57px;
+  }
+  .btn-enviar{
+    margin-left: 57px;
+  
+  }
+
+  .logos-continuos img{
+    max-height: 24px;
+  }
+}
+  
+
+
+
+@media screen and (min-width: 1350px){
+  /*========PRODUCTOS PRINCIPALES=============*/
+ 
+  #productos .productos__img {
+    height: 250px;
+  }
+  #productos .productos__card {
+    height: 405px;
+    width: 20%;
+    left: 22px;
+    margin: 0 17px;
+  }
+
+  #tuberias .productos__card {
+    height: 405px;
+    width: 20%;
+    left: 22px;
+    margin: 0 17px;
+  }
+
+  
+  .card__rightf {
+    top: 48px;
+    left: 88%;
+    width: 90%;
+    height: 83%;
+    position: absolute;
+  }
+
+   #categoria__containerf .title-secondary {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  
+  .icono-listaf li {
+    margin-bottom: 2rem;
+  
+  }
+  .img-container--categoria1{
+    height: 230px;
+  }
+
+  /*============FORMULARIO===========*/
+  .g-recaptcha {
+    margin-left: 60px;
+  }
+
+  .btn-enviar {
+    margin: 0 60px;
+  }
+
+  .logos-continuos img {
+    max-height: 26px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .nav__list {
+    column-gap: 6.5rem;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+  }
+  .logo1 {
+    width: 140px;
+    margin-left: 35px;
+  }
+  /*======INICIO========*/
+  .home__data {
+    margin-right: 660px;
+  }
+  .home__title {
+    font-size: 4.4em;
+  }
+  .home__description {
+    font-size: 1.4em;
+  }
+  /*======TITULLOS========*/
+  .titulo_section {
+    font-size: 3.3em;
+  }
+
+  /*========PRODUCTOS PRINCIPALES=============*/
+  #productos .section__subtitle {
+    font-size: 2.5rem;
+  }
+  #productos .productos__img {
+    height: 250px;
+  }
+  #productos .productos__card {
+    height: 405px;
+    width: 20%;
+    left: 22px;
+    margin: 0 17px;
+  }
+
+  #tuberias .productos__img {
+    height: 250px;
+  }
+  #tuberias .productos__card {
+    height: 405px;
+    width: 20%;
+    left: 22px;
+    margin: 0 17px;
+  }
+
+  .title-secondary {
+    font-size: 1.7em;
+    text-align: left;
+    margin-left: 24px;
+  }
+  #categoria__content2 .card-base {
+    width: 70%;
+  }
+  #categoria__content2 .card-ultimo {
+    width: 120%;
+    left: 100px;
+  }
+  .text-body {
+    font-size: 1em;
+  }
+
+  .card__rightf {
+    top: 197px;
+    left: 50%;
+    width: 90%;
+    height: 60%;
+    position: absolute;
+  }
+
+  #categoria__containerf .title-secondary {
+    font-size: 2.4em;
+    margin-bottom: 35px;
+  }
+  .text-container2 {
+    padding: 22px 15px;
+  }
+  .icono-listaf li {
+    margin-bottom: 2.4rem;
+    font-size: 15px;
+  }
+  /*======PRODUCTOS PRINCIPALES====*/
+  #categoria .card-base {
+    right: 100%;
+    width: 185%;
+  }
+  .img-container--categoria1 {
+    height: 274px;
+  }
+  .icono-lista li {
+    margin-bottom: 1rem;
+  }
+
+  .card__rightf {
+    top: 78px;
+    left: 88%;
+    width: 110%;
+    height: 87%;
+    position: absolute;
+  }
+  /*===========FORMULARIO========*/
+  .contacto-title{
+    font-size: 2.4em;
+  }
+  .form-doble{
+    width: 89%;
+     margin-left: 35px;
+  }
+  .form-name{
+    width: 98%;
+    margin-left: 28px;
+  }
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+  .g-recaptcha {
+    margin-left: 65px;
+  }
+  .btn-enviar{
+    margin-left: 65px;
+  
+  }
+
+  .mapa-lado{
+    width: 90%;
+  }
+
+
+  /*======FOOTER======*/
+  .logo-lado img{
+    margin-left: 5em;
+    height: 30px;
+  }
+
+  .logos-continuos{
+    gap: 10px;
+  }
+
+  .logos-continuos img{
+    max-height: 26px;
+  }
+
+}
+@media screen and (min-width: 1920px){
+  .home__title {
+    margin-left: -4.4em;
+  }
+  .home__description{
+    margin-left: -13.5em;
+  }
+  #productos .productos__card {
+    height: 405px;
+    width: 15%;
+    left: 140px;
+    margin: 0 17px;
+  }
+  #tuberias .productos__card {
+    height: 405px;
+    width: 15%;
+    left: 140px;
+    margin: 0 17px;
+  }
+  
+
+  .card__rightf {
+    top: -60px;
+    left: 120%;
+    width: 137%;
+    height: 87%;
+    position: absolute;
+    }
+
+  .form-name{
+    width: 91%;
+    margin-left: 53px;
+  }
+  .form-estado{
+    margin-left: 50px;
+  }
+  .g-recaptcha {
+    margin-left: 87px;
+  }
+  .btn-enviar{
+    margin-left: 87px;
+  
+  }
+
+  .logos-continuos img{
+    max-height: 40px;
+  }
+  }
+
