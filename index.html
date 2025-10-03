@@ -20,12 +20,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!--=============== SWIPER CSS ===============-->
-    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css"> 
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="css/style.css"> 
 
-    
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <title>Max Acero - Ferremayoreo</title>
 </head>
 
@@ -33,7 +36,7 @@
 
     <!--=============== HEADER ===============-->
     <header class="header" id="header">
-        <nav class="nav container">
+        <nav class="nav container  header__container">
             <a href="#" class="nav__logo">
                 <img src="/images/Logo_max_aceros.png" class="logo1" alt="img"> 
             </a>
@@ -78,7 +81,7 @@
 
        <!--=============== INICIO ===============-->
        <section class="home section" id="section-inicio">
-            <div class="home__container container grid">
+            <div class="home__container  grid">
                 <div class="home__content grid">
                     <div class="home__data">
                         <h1 class="home__title">
@@ -100,7 +103,7 @@
                 <div class="text-container">
                     <h3 class="h3--top">¿QUIÉNES SOMOS?</h3>
                     <p><span class="bold-acentuado">Max Aceros Ferremayoreo</span> somos una empresa mexicana que se dedica a la distribución y venta de materiales de construcción, ferreteros, marítimos y petroleros.</p>
-                     <h3 class="h3--bot">MISIÓN</h3>
+                     <h3>MISIÓN</h3>
                     <p>Buscamos brindar soluciones prácticas y productos de calidad, ofreciendo un servicio eficiente y cercano a nuestros clientes.</p>
                 </div>
             </div>
@@ -109,7 +112,7 @@
        <!--=============== PRODUCTOS PRINCIPALES ===============-->
        <section class="productos section" id="productos">
             <h2 class="titulo_section">PRODUCTOS PRINCIPALES</h2>
-            <h4 class="section__subtitle">TUBERíAS</h4>
+            <h4 class="section__subtitle">TUBERÍAS</h4>
             <h5 class="section__subtitle-2">Acero al Carbón e Inoxidables</h5>
 
             <!--=============== PRIMER CARRUSEL ===============-->
@@ -197,7 +200,7 @@
 
                             <div class="productos__data">
                                 <h2 class="productos__title">CODOS DE ACERO AL CARBÓN</h2>
-                                <p>MITRADOS A GAJOS DE 36" x1/2“ DE ESP. COSTURA RECTA, NORMA AWWA-C2058.</p>
+                                <p>MITRADOS A GAJOS DE 36" x1/2“ DE ESP. COSTURA RECTA, NORMA AWWA - C2058.</p>
                             </div>
                         </article>
 
@@ -237,7 +240,7 @@
 
                             <div class="productos__data">
                                 <h2 class="productos__title">TEE´S DE ACERO AL CARBÓN</h2>
-                                <p>DE 36" x 1/2“ DE ESP.COSTURA RECTA, NORMA AWWA-C2058 CONDUCCIÓN.
+                                <p>DE 36" x 1/2“ DE ESP. COSTURA RECTA, NORMA AWWA-C2058 CONDUCCIÓN.
 
                                 </p>
                             </div>
@@ -260,10 +263,10 @@
            
        <!--=============== CATEGORIA DE PRODUCTOS ===============-->
        <section id="categoria__productos" >
-            <h2 class="titulo_section">CATEGORIA DE PRODUCTOS</h2>
+            <h2 class="titulo_section">CATEGORÍA DE PRODUCTOS</h2>
             <section id="categoria">  
                 <div class="categoria__content grid">
-                    <div class="section-container">
+                    <div class="section-container" id="section-container">
                         <div class="card-base category-main">
                             <div class="flex-container flex-container--column"> 
                                 <div class="img-container-base img-container--categoria1" ></div>
@@ -461,8 +464,14 @@
                                 <textarea placeholder="Explícanos tu proyecto:" rows="5" name="asunto"></textarea>
                             </div>
                         </div>
-                         <div class="g-recaptcha" data-sitekey="6LdVCNkrAAAAAO_TH-JAIm0Oe1q5O1bgo0fOOffO"></div>
-                        <button type="submit" class="btn-enviar">Enviar</button>
+                        <div class="captcha-wrapper">
+                             <div class="g-recaptcha" data-sitekey="6LdVCNkrAAAAAO_TH-JAIm0Oe1q5O1bgo0fOOffO"></div>
+                        </div>
+                         
+                        <div class="btn-wrapper">
+                            <button type="submit" class="btn-enviar">Enviar</button>
+                        </div>
+                        
 
                     </form>
                 </div>
@@ -504,23 +513,26 @@
 
 
             </div>
+            <a href="https://wa.link/40vgpy" class="float" target="_blank">
+                 <i class="bi bi-whatsapp my-float"></i>
+            </a> 
        </section>
 
 
        <!--=============== FOOTER ===============-->
        <section class="footer section" id="footer">
             <div class="footer-container">
-                <div class="logo-lado">
-                    <img src="/images/Logo_max_aceros.png" alt="">
-                </div>
+                <a href="#" class="logo-lado">
+                    <img  src="/images/Logo_max_aceros.png" alt="">
+                </a>
 
                 <div class="luminel-lado">
                     <div class="letra-container">
                         <p>Diseñado por Luminel Agencia Creativa</p>
                     </div>
-                    <div class="logo-luminel">
+                    <a href="https://woah.pbxhosting.com.mx/" target="_blank" class="logo-luminel">
                         <img src="/images/Logo_luminel.png" alt="">
-                    </div>
+                    </a>
                 </div>
 
             </div>
@@ -557,6 +569,7 @@
     <!--=============== SWIPER JS ===============-->
     <script src="/js/swiper-bundle.min.js"></script>
 
+    <script src="/js/scrollreveal.min.js"></script>
     <!--=============== MAIN JS ===============-->
         <script src="js/main.js"></script>
         
