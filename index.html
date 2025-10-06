@@ -1,578 +1,707 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!--=============== FAVICON  ===============-->
-    <link rel="shortcut icon" href="images/Logo_max_aceros.png" type="image/x-icon"> 
+    <link
+      rel="shortcut icon"
+      href="images/Logo_max_aceros.png"
+      type="image/x-icon"
+    />
 
     <!--=============== FONTAWESOME ICONS ===============-->
-    <script src="https://kit.fontawesome.com/706fd572d8.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/706fd572d8.js"
+      crossorigin="anonymous"
+    ></script>
 
-     <!--=============== FONTS ===============-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!--=============== FONTS ===============-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!--=============== SWIPER CSS ===============-->
-    <link rel="stylesheet" href="/css/swiper-bundle.min.css"> 
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
 
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/style.css" />
 
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
     <title>Max Acero - Ferremayoreo</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!--=============== HEADER ===============-->
     <header class="header" id="header">
-        <nav class="nav container  header__container">
-            <a href="#" class="nav__logo">
-                <img src="/images/Logo_max_aceros.png" class="logo1" alt="img"> 
-            </a>
+      <nav class="nav container header__container">
+        <a href="#" class="nav__logo">
+          <img src="/images/Logo_max_aceros.png" class="logo1" alt="img" />
+        </a>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li>
-                        <a href="#about" class="nav__link active-link">Nosotros</a>
-                    </li>
-                    <li>
-                        <a href="#productos" class="nav__link">Productos Principales</a>
-                    </li>
-                    <li>
-                        <a href="#categoria__productos" class="nav__link">Servicios</a>
-                    </li>
-                    <li>
-                        <a href="#clientes" class="nav__link">Nuestros Clientes</a>
-                    </li>
-                    <li>
-                        <a href="#contacto" class="nav__link button1">Contacto</a>
-                    </li>
-                </ul>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li>
+              <a href="#about" class="nav__link active-link">Nosotros</a>
+            </li>
+            <li>
+              <a href="#productos" class="nav__link">Productos Principales</a>
+            </li>
+            <li>
+              <a href="#categoria__productos" class="nav__link"
+                >Categoria de productos</a
+              >
+            </li>
+            <li>
+              <a href="#clientes" class="nav__link">Nuestros Clientes</a>
+            </li>
+            <li>
+              <a href="#contacto" class="nav__link button1">Contacto</a>
+            </li>
+          </ul>
 
+          <!--BOTON CERRAR-->
+          <div class="nav__close" id="nav-close">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
 
-                <!--BOTON CERRAR-->
-                <div class="nav__close" id="nav-close">
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
-        
-            </div>
-
-            <!--MENU TOGGLE -->
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-
-        </nav>
+        <!--MENU TOGGLE -->
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
     </header>
 
     <!--=============== MAIN ===============-->
     <main class="main">
-
-       <!--=============== INICIO ===============-->
-       <section class="home section" id="section-inicio">
-            <div class="home__container  grid">
-                <div class="home__content grid">
-                    <div class="home__data">
-                        <h1 class="home__title">
-                            SOMOS MAX FUERTES
-                        </h1>
-                        <p class="home__description">
-                            Construye el futuro con acero de calidad
-                        </p>
-                    </div>
-                </div>
+      <!--=============== INICIO ===============-->
+      <section class="home section" id="section-inicio">
+        <div class="home__container grid">
+          <div class="home__content grid">
+            <div class="home__data">
+              <h1 class="home__title">SOMOS MAX FUERTES</h1>
+              <p class="home__description">
+                Construye el futuro con acero de calidad
+              </p>
             </div>
-       </section> 
+          </div>
+        </div>
+      </section>
 
-       <!--=============== NOSOTROS ===============-->
-       <section id="about">
-            <h2 class="titulo_section">NOSOTROS</h2>
-            <div class="about__container"> 
-                <div class="img-container" ></div>
-                <div class="text-container">
-                    <h3 class="h3--top">¿QUIÉNES SOMOS?</h3>
-                    <p><span class="bold-acentuado">Max Aceros Ferremayoreo</span> somos una empresa mexicana que se dedica a la distribución y venta de materiales de construcción, ferreteros, marítimos y petroleros.</p>
-                     <h3>MISIÓN</h3>
-                    <p>Buscamos brindar soluciones prácticas y productos de calidad, ofreciendo un servicio eficiente y cercano a nuestros clientes.</p>
+      <!--=============== NOSOTROS ===============-->
+      <section id="about">
+        <h2 class="titulo_section">NOSOTROS</h2>
+        <div class="about__container">
+          <div class="img-container"></div>
+          <div class="text-container">
+            <h3 class="h3--top">¿QUIÉNES SOMOS?</h3>
+            <p class="parrafo">
+              Max Aceros Ferremayoreo somos una empresa mexicana que se dedica a
+              la distribución y venta de materiales de construcción, ferreteros,
+              marítimos y petroleros.
+            </p>
+            <h3>MISIÓN</h3>
+            <p>
+              Buscamos brindar soluciones prácticas y productos de calidad,
+              ofreciendo un servicio eficiente y cercano a nuestros clientes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== PRODUCTOS PRINCIPALES ===============-->
+      <section class="productos section" id="productos">
+        <h2 class="titulo_section">PRODUCTOS PRINCIPALES</h2>
+        <h4 class="section__subtitle">TUBERÍAS</h4>
+        <h5 class="section__subtitle-2">Acero al Carbón e Inoxidables</h5>
+
+        <!--=============== PRIMER CARRUSEL ===============-->
+        <div class="productos__container container grid">
+          <div class="productos__swiper swiper">
+            <div class="swiper-wrapper">
+              <article class="productos__card swiper-slide">
+                <img
+                  src="/images/Carrusel1_max_aceros.png"
+                  alt="image"
+                  class="productos__img"
+                />
+
+                <div class="productos__data">
+                  <h2 class="productos__title">TUBERÍA DE ACERO AL CARBÓN</h2>
+                  <p>
+                    DIAMETRO MENOR TUBERÍA DE 18" x 3/8" DE ESP. COSTURA
+                    LONGITUDINAL, NORMA A-53 B. TARMO A 12.00 MTRS
+                  </p>
                 </div>
+              </article>
+
+              <article class="productos__card swiper-slide">
+                <img
+                  src="/images/Carrusel2_max_aceros.png"
+                  alt="image"
+                  class="productos__img"
+                />
+
+                <div class="productos__data">
+                  <h2 class="productos__title">TUBERÍA DE ACERO AL CARBÓN</h2>
+                  <p>
+                    CON COSTURA HELICOIDAL DESDE 24” HASTA 140” DE DIÁMETRO,
+                    DESDE .250” HASTA 3/4” DE ESP.
+                  </p>
+                </div>
+              </article>
+
+              <article class="productos__card swiper-slide">
+                <img
+                  src="/images/Carrusel3_max_aceros.png"
+                  alt="image"
+                  class="productos__img"
+                />
+
+                <div class="productos__data">
+                  <h2 class="productos__title">TUBERÍA DE ACERO AL CARBÓN</h2>
+                  <p>
+                    E INOXIDABLE SIN COSTURA DESDE 1” HASTA 24” DE
+                    DIÁMETRO–CÉDULAS 10, 20, 40 HAS TA160.
+                  </p>
+                </div>
+              </article>
+
+              <article class="productos__card swiper-slide">
+                <img
+                  src="/images/Carrusel4_max_aceros.png"
+                  alt="image"
+                  class="productos__img"
+                />
+
+                <div class="productos__data">
+                  <h2 class="productos__title">TUBERÍA DE LÍNEA API 5L–0842</h2>
+                  <p>
+                    ISO 3183 CONDUCCIÓN DE HIDROCARBUROS CERTIFICADO B HASTA X70
+                    PSL1/PSL 2 PARA SERVICIO AMARGO Y NO AMARGO.
+                  </p>
+                </div>
+              </article>
+
+              <article class="productos__card swiper-slide">
+                <img
+                  src="/images/Carrusel5_max_aceros.png"
+                  alt="image"
+                  class="productos__img"
+                />
+
+                <div class="productos__data">
+                  <h2 class="productos__title">TUBERÍA RANURADA</h2>
+                  <p>
+                    LONGITUDINAL PARA PERFORACIÓN DE POZOS PROFUNDOS DE AGUA
+                    POTABLE PARA LOS DIFER ENTES ORGANISMOS OPERADORES TUBERÍA.
+                  </p>
+                </div>
+              </article>
             </div>
-       </section>
+          </div>
 
-       <!--=============== PRODUCTOS PRINCIPALES ===============-->
-       <section class="productos section" id="productos">
-            <h2 class="titulo_section">PRODUCTOS PRINCIPALES</h2>
-            <h4 class="section__subtitle">TUBERÍAS</h4>
-            <h5 class="section__subtitle-2">Acero al Carbón e Inoxidables</h5>
+          <!--Botones de Navegacion-->
+          <div class="swiper-button-prev swiper-button-prev-1">
+            <i class="fa-solid fa-angles-left" style="color: #fe7606"></i>
+          </div>
 
-            <!--=============== PRIMER CARRUSEL ===============-->
-            <div class="productos__container container grid">
-                <div class="productos__swiper swiper">
-                    <div class="swiper-wrapper">
+          <div class="swiper-button-next swiper-button-next-1">
+            <i class="fa-solid fa-angles-right" style="color: #fe7606"></i>
+          </div>
+        </div>
+      </section>
 
-                        <article class="productos__card swiper-slide">
-                            <img src="/images/Carrusel1_max_aceros.png" alt="image" class="productos__img">
+      <!--=============== SEGUNDO CARRUSEL ===============-->
+      <section class="productos section" id="tuberias">
+        <h4 class="section__subtitle">CONDUCCIONES</h4>
+        <h5 class="section__subtitle-2">Acero al Carbón</h5>
 
-                            <div class="productos__data">
-                                <h2 class="productos__title">TUBERÍA DE ACERO AL CARBÓN</h2>
-                                <p>DIAMETRO MENOR TUBERÍA DE 18" x 3/8" DE ESP. COSTURA LONGITUDINAL, NORMA A-53 B. TARMO A 12.00 MTRS</p>
-                            </div>
-                        </article>
+        <div class="productos__container container grid">
+          <div class="productos__swiper2 swiper">
+            <div class="swiper-wrapper">
+              <article class="productos__card swiper-slide">
+                <img
+                  src="/images/Carrusel6_max_aceros.png"
+                  alt="image"
+                  class="productos__img"
+                />
 
-                        <article class="productos__card swiper-slide">
-                            <img src="/images/Carrusel2_max_aceros.png" alt="image" class="productos__img">
-
-                            <div class="productos__data">
-                                <h2 class="productos__title">TUBERÍA DE ACERO AL CARBÓN</h2>
-                                <p>CON COSTURA HELICOIDAL DESDE 24” HASTA 140” DE DIÁMETRO, DESDE .250” HASTA 3/4” DE ESP.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="productos__card swiper-slide">
-                            <img src="/images/Carrusel3_max_aceros.png" alt="image" class="productos__img">
-
-                            <div class="productos__data">
-                                <h2 class="productos__title">TUBERÍA DE ACERO AL CARBÓN</h2>
-                                <p>E INOXIDABLE SIN COSTURA DESDE 1” HASTA 24” DE DIÁMETRO–CÉDULAS 10, 20, 40 HAS TA160.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="productos__card swiper-slide">
-                            <img src="/images/Carrusel4_max_aceros.png" alt="image" class="productos__img">
-
-                            <div class="productos__data">
-                                <h2 class="productos__title">TUBERÍA DE LÍNEA API 5L–0842</h2>
-                                <p>ISO 3183 CONDUCCIÓN DE HIDROCARBUROS CERTIFICADO B HASTA X70 PSL1/PSL 2 PARA SERVICIO AMARGO Y NO AMARGO.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="productos__card swiper-slide">
-                            <img src="/images/Carrusel5_max_aceros.png" alt="image" class="productos__img">
-
-                            <div class="productos__data">
-                                <h2 class="productos__title">TUBERÍA RANURADA</h2>
-                                <p>LONGITUDINAL PARA PERFORACIÓN DE POZOS PROFUNDOS DE AGUA POTABLE PARA LOS DIFER ENTES ORGANISMOS OPERADORES TUBERÍA.
-                                </p>
-                            </div>
-                        </article>
-                    </div>
+                <div class="productos__data">
+                  <h2 class="productos__title">CODOS DE ACERO AL CARBÓN</h2>
+                  <p>
+                    MITRADOS A GAJOS DE 36" x1/2“ DE ESP. COSTURA RECTA, NORMA
+                    AWWA - C2058.
+                  </p>
                 </div>
-                
-                
-                
-                <!--Botones de Navegacion-->
-                <div class="swiper-button-prev swiper-button-prev-1">
-                    <i class="fa-solid fa-angles-left" style="color: #fe7606;"></i>
-                </div>
+              </article>
 
-                <div class="swiper-button-next swiper-button-next-1">
-                    <i class="fa-solid fa-angles-right" style="color: #fe7606;" ></i>
-                </div>
+              <article class="productos__card swiper-slide">
+                <img
+                  src="/images/Carrusel7_max_aceros.png"
+                  alt="image"
+                  class="productos__img"
+                />
 
+                <div class="productos__data">
+                  <h2 class="productos__title">
+                    REDUCCIONES CONCÉNTRICAS Y TEE´S RECTAS.
+                  </h2>
+                  <p>
+                    CON COSTURA HELICOIDAL DESDE 24” HASTA 140” DE DIÁMETRO,
+                    DESDE .250” HASTA 3/4” DE ESP.
+                  </p>
+                </div>
+              </article>
+
+              <article class="productos__card swiper-slide">
+                <img
+                  src="/images/Carrusel8_max_aceros.png"
+                  alt="image"
+                  class="productos__img"
+                />
+
+                <div class="productos__data">
+                  <h2 class="productos__title">CODOS DE ACERO AL CARBÓN</h2>
+                  <p>
+                    MITRADOS A GAJOS DE 28” A 90 X 3/8” DE ESP. NORMA AWWA-C208.
+                  </p>
+                </div>
+              </article>
+
+              <article class="productos__card swiper-slide">
+                <img
+                  src="/images/Carrusel9_max_aceros.png"
+                  alt="image"
+                  class="productos__img"
+                />
+
+                <div class="productos__data">
+                  <h2 class="productos__title">
+                    REDUCCIONES EXCÉNTRICAS DE ACERO AL CARBÓN
+                  </h2>
+                  <p>CON COSTURA RECTA DE 20" A18" EN 3/8" DE ESP.</p>
+                </div>
+              </article>
+
+              <article class="productos__card swiper-slide">
+                <img
+                  src="/images/Carrusel10_max_aceros.png"
+                  alt="image"
+                  class="productos__img"
+                />
+
+                <div class="productos__data">
+                  <h2 class="productos__title">TEE´S DE ACERO AL CARBÓN</h2>
+                  <p>
+                    DE 36" x 1/2“ DE ESP. COSTURA RECTA, NORMA AWWA-C2058
+                    CONDUCCIÓN.
+                  </p>
+                </div>
+              </article>
             </div>
+          </div>
 
+          <!--Botones de Navegacion-->
+          <div class="swiper-button-prev swiper-button-prev-2">
+            <i class="fa-solid fa-angles-left" style="color: #fe7606"></i>
+          </div>
+
+          <div class="swiper-button-next swiper-button-next-2">
+            <i class="fa-solid fa-angles-right" style="color: #fe7606"></i>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== CATEGORIA DE PRODUCTOS ===============-->
+      <section id="categoria__productos">
+        <h2 class="titulo_section">CATEGORÍA DE PRODUCTOS</h2>
+        <section id="categoria">
+              <div class="card-base category-main">
+                <div class="flex-container flex-container--column">
+                  <div
+                    class="img-container-base img-container--categoria1"
+                  ></div>
+                  <div class="card-text">
+                    <h3 class="title-secondary">SISTEMAS CONTRA INCENDIOS</h3>
+                    <ul class="text-body icono-lista">
+                      <li>Tuberías y conexiones.</li>
+                      <li>Válvulas, soportería y anclajes.</li>
+                      <li>Rociadores automáticos y boquillas.</li>
+                      <li>Gabinetes, mangueras y accesorios para hidrantes.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
         </section>
 
-         <!--=============== SEGUNDO CARRUSEL ===============-->
-        <section class="productos section" id="tuberias">
-            <h4 class="section__subtitle">CONDUCCIONES</h4>
-            <h5 class="section__subtitle-2">Acero al Carbón</h5>
-
-            <div class="productos__container container grid">
-                <div class="productos__swiper2 swiper">
-                    <div class="swiper-wrapper">
-
-                        <article class="productos__card swiper-slide">
-                            <img src="/images/Carrusel6_max_aceros.png" alt="image" class="productos__img">
-
-                            <div class="productos__data">
-                                <h2 class="productos__title">CODOS DE ACERO AL CARBÓN</h2>
-                                <p>MITRADOS A GAJOS DE 36" x1/2“ DE ESP. COSTURA RECTA, NORMA AWWA - C2058.</p>
-                            </div>
-                        </article>
-
-                        <article class="productos__card swiper-slide">
-                            <img src="/images/Carrusel7_max_aceros.png" alt="image" class="productos__img">
-
-                            <div class="productos__data">
-                                <h2 class="productos__title">REDUCCIONES CONCÉNTRICAS Y TEE´S RECTAS.</h2>
-                                <p>CON COSTURA HELICOIDAL DESDE 24” HASTA 140” DE DIÁMETRO, DESDE .250” HASTA 3/4” DE ESP.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="productos__card swiper-slide">
-                            <img src="/images/Carrusel8_max_aceros.png" alt="image" class="productos__img">
-
-                            <div class="productos__data">
-                                <h2 class="productos__title">CODOS DE ACERO AL CARBÓN</h2>
-                                <p>MITRADOS A GAJOS DE 28” A 90 X 3/8” DE ESP. NORMA AWWA-C208.
-
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="productos__card swiper-slide">
-                            <img src="/images/Carrusel9_max_aceros.png" alt="image" class="productos__img">
-
-                            <div class="productos__data">
-                                <h2 class="productos__title">REDUCCIONES EXCÉNTRICAS DE ACERO AL CARBÓN</h2>
-                                <p>CON COSTURA RECTA DE 20" A18" EN 3/8" DE ESP.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="productos__card swiper-slide">
-                            <img src="/images/Carrusel10_max_aceros.png" alt="image" class="productos__img">
-
-                            <div class="productos__data">
-                                <h2 class="productos__title">TEE´S DE ACERO AL CARBÓN</h2>
-                                <p>DE 36" x 1/2“ DE ESP. COSTURA RECTA, NORMA AWWA-C2058 CONDUCCIÓN.
-
-                                </p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                
-                
-                <!--Botones de Navegacion-->
-                <div class="swiper-button-prev swiper-button-prev-2">
-                    <i class="fa-solid fa-angles-left" style="color: #fe7606;"></i>
-                </div>
-
-                <div class="swiper-button-next swiper-button-next-2">
-                    <i class="fa-solid fa-angles-right" style="color: #fe7606;" ></i>
-                </div>
-
+        <!--=========== SEGUNDA CATEGORIA DE PRODUCTOS ============-->
+        <div id="categoria__content2" class="categoria__content2 grid">
+          <div class="card-base">
+            <div class="flex-container flex-container--column">
+              <div class="img-container-base img-container--categoria2"></div>
+              <div class="card-text">
+                <h3 class="title-secondary">MARÍTIMOS</h3>
+                <ul class="text-body text-body--center icono-lista2">
+                  <li>Boyas..</li>
+                  <li>Sistema de izaje.</li>
+                  <li>Cabos.</li>
+                  <li>Anclas.</li>
+                  <li>Grilletes.</li>
+                  <li>Cadena grado marino.</li>
+                </ul>
+              </div>
             </div>
-        </section>
-           
-       <!--=============== CATEGORIA DE PRODUCTOS ===============-->
-       <section id="categoria__productos" >
-            <h2 class="titulo_section">CATEGORÍA DE PRODUCTOS</h2>
-            <section id="categoria">  
-                <div class="categoria__content grid">
-                    <div class="section-container" id="section-container">
-                        <div class="card-base category-main">
-                            <div class="flex-container flex-container--column"> 
-                                <div class="img-container-base img-container--categoria1" ></div>
-                                <div class="card-text">
-                                    <h3 class="title-secondary">SISTEMAS CONTRA INCENDIOS</h3>
-                                    <ul class="text-body  icono-lista">
-                                        <li>Tuberías y conexiones.</li>
-                                        <li>Válvulas, soportería y anclajes.</li>
-                                        <li>Rociadores automáticos y boquillas.</li>
-                                        <li>Gabinetes, mangueras y accesorios para hidrantes.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>     
-                    </div>
-                </div>
-            </section>
+          </div>
 
-            <!--=========== SEGUNDA CATEGORIA DE PRODUCTOS ============-->
-            <div id="categoria__content2" class="categoria__content2 grid">
-                    <div class="card-base">
-                        <div class="flex-container flex-container--column"> 
-                                <div class="img-container-base img-container--categoria2" ></div>
-                                <div class="card-text">
-                                    <h3 class="title-secondary" >MARÍTIMOS</h3>
-                                    <ul class="text-body text-body--center icono-lista2">
-                                        <li>Boyas..</li>
-                                        <li>Sistema de izaje.</li>
-                                        <li>Cabos.</li>
-                                        <li>Anclas.</li>
-                                        <li>Grilletes.</li>
-                                        <li>Cadena grado marino.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                    </div>
+          <div class="card-base">
+            <div class="flex-container flex-container--column">
+              <div class="img-container-base img-container--categoria3"></div>
+              <div class="card-text">
+                <h3 class="title-secondary">CONSTRUCCIÓN</h3>
+                <ul class="text-body text-body--center icono-lista2">
+                  <li>Acero estructural.</li>
+                  <li>Tablaroca.</li>
+                  <li>Anclas de cimentación.</li>
+                  <li>Material de construcción.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-                    <div class="card-base">
-                        <div class="flex-container flex-container--column"> 
-                                <div class="img-container-base img-container--categoria3" ></div>
-                                <div class="card-text">
-                                    <h3 class="title-secondary">CONSTRUCCIÓN</h3>
-                                    <ul class="text-body text-body--center icono-lista2">
-                                        <li>Acero estructural.</li>
-                                        <li>Tablaroca.</li>
-                                        <li>Anclas de cimentación.</li>
-                                        <li>Material de construcción.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                    </div>
+          <div class="card-base">
+            <div class="flex-container flex-container--column">
+              <div class="img-container-base img-container--categoria4"></div>
+              <div class="card-text">
+                <h3 class="title-secondary">PETROLEROS</h3>
+                <ul class="text-body text-body--center icono-lista2">
+                  <li>Válvulas.</li>
+                  <li>Tubería acero al carbón.</li>
+                  <li>Conexiones grado 3000.</li>
+                  <li>Sistema contra incendio.</li>
+                  <li>Luminarias anti explosión.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-                    <div class="card-base">
-                        <div class="flex-container flex-container--column"> 
-                                <div class="img-container-base img-container--categoria4" ></div>
-                                <div class="card-text">
-                                    <h3 class="title-secondary">PETROLEROS</h3>
-                                    <ul class="text-body text-body--center icono-lista2">
-                                        <li>Válvulas.</li>
-                                        <li>Tubería acero al carbón.</li>
-                                        <li>Conexiones grado 3000.</li>
-                                        <li>Sistema contra incendio.</li>
-                                        <li>Luminarias anti explosión.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                    </div>
+          <div class="card-base">
+            <div class="flex-container flex-container--column">
+              <div class="img-container-base img-container--categoria5"></div>
+              <div class="card-text">
+                <h3 class="title-secondary">FERRETEROS</h3>
+                <ul class="text-body text-body--center icono-lista2">
+                  <li>Herramientas.</li>
+                  <li>Plomería.</li>
+                  <li>Tubería.</li>
+                  <li>Válvulas..</li>
+                  <li>Tornillería general y especializada.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-                    <div class="card-base">
-                        <div class="flex-container flex-container--column"> 
-                                <div class="img-container-base img-container--categoria5" ></div>
-                                <div class="card-text">
-                                    <h3 class="title-secondary">FERRETEROS</h3>
-                                    <ul class="text-body text-body--center icono-lista2">
-                                        <li>Herramientas.</li>
-                                        <li>Plomería.</li>
-                                        <li>Tubería.</li>
-                                        <li>Válvulas..</li>
-                                        <li>Tornillería general y especializada.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                    </div>
-
-                    <div class="card-base card-ultimo">
-                        <div class="flex-container flex-container--column"> 
-                                <div class="img-container-base img-container--categoria6" ></div>
-                                <div class="card-text">
-                                    <h3 class="title-secondary">SISTEMAS DE ANCLAJE</h3>
-                                    <ul class="text-body text-body--center icono-lista2">
-                                        <li>Soluciones en acero y acero inoxidable de alta resistencia.</li>
-                                        <li>Producción de piezas especializadas y estándar, según los requerimientos del proyecto.
-                                        </li>
-                                        <li>Personalización en dimensiones, acabados y materiales.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-       </section> 
-       
+          <div class="card-base card-ultimo">
+            <div class="flex-container flex-container--column">
+              <div class="img-container-base img-container--categoria6"></div>
+              <div class="card-text">
+                <h3 class="title-secondary">SISTEMAS DE ANCLAJE</h3>
+                <ul class="text-body text-body--center icono-lista2">
+                  <li>
+                    Soluciones en acero y acero inoxidable de alta resistencia.
+                  </li>
+                  <li>
+                    Producción de piezas especializadas y estándar, según los
+                    requerimientos del proyecto.
+                  </li>
+                  <li>
+                    Personalización en dimensiones, acabados y materiales.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!--===================PARTE FINAL DE CATEGORIA=============-->
 
-      <section id="categoria__final">  
-                <div class="categoria__content grid">
-                    <div class="categoria__data2">
-                        <div class="card2  card__rightf">
-                            <div id="categoria__containerf"> 
-                                <div class="text-container2">
-                                    <h3 class="title-secondary">TAMBIÉN CONTAMOS CON:</h3>
-                                    <ul class="text-body icono-listaf">
-                                        <li>Asesoría e instalación de tanques de almacenamiento de agua potable e hidrocarburos.</li>
-                                        <li>Asesoría e instalación de sistemas contra incendio.</li>
-                                        <li>Reparación de tubería de agua potable con reforzamiento de membrana.</li>
-                                        <li>Monitoreo robótico de tuberías para detección de fallas.</li>
-                                        <li>Financiamiento directo para proyectos de construcción con garantía inmobiliaria. </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div> 
-                    </div>
+      <section id="categoria__final">
+            <div class="card2 card__rightf">
+              <div id="categoria__containerf">
+                <div class="text-container2">
+                  <h3 class="title-secondary">TAMBIÉN CONTAMOS CON:</h3>
+                  <ul class="text-body icono-listaf">
+                    <li>
+                      Asesoría e instalación de tanques de almacenamiento de
+                      agua potable e hidrocarburos.
+                    </li>
+                    <li>Asesoría e instalación de sistemas contra incendio.</li>
+                    <li>
+                      Reparación de tubería de agua potable con reforzamiento de
+                      membrana.
+                    </li>
+                    <li>
+                      Monitoreo robótico de tuberías para detección de fallas.
+                    </li>
+                    <li>
+                      Financiamiento directo para proyectos de construcción con
+                      garantía inmobiliaria.
+                    </li>
+                  </ul>
                 </div>
-            </section>
-       
+              </div>
+            </div>
+          
 
-       <!--=============== NUESTROS CLIENTES ===============-->
-       <section class="clientes section" id="clientes">
+      </section>
+
+      <!--=============== NUESTROS CLIENTES ===============-->
+      <section class="clientes section" id="clientes">
         <h2 class="titulo_section">NUESTROS CLIENTES</h2>
-        <h5 class="section__subtitle-2">Ellos confian en nosotros para hacer crecer sus proyectos</h5>
+        <h5 class="section__subtitle-2">
+          Ellos confian en nosotros para hacer crecer sus proyectos
+        </h5>
         <section class="containerclientes grid">
-            <section class="clientes__content grid">
-                <div class="card-base client-card">
-                    <div class="flex-container flex-container--center"> 
-                        <div class="img-container-base img-container--cliente1"></div>
-                    </div>
-                </div>
-                 <div class="card-base client-card">
-                    <div class="flex-container flex-container--center"> 
-                        <div class="img-container-base img-container--cliente2"></div>
-                    </div>
-                </div>
-                 <div class="card-base client-card">
-                    <div class="flex-container flex-container--center"> 
-                        <div class="img-container-base img-container--cliente3"></div>
-                    </div>
-                </div>
-                 <div class="card-base client-card">
-                    <div class="flex-container flex-container--center"> 
-                        <div class="img-container-base img-container--cliente4"></div>
-                    </div>
-                </div>
-                
-            </section>
-            <section class="card__clientes2">
-                <div class="img-container-clientes5"></div>
-            </section>
+          <section class="clientes__content grid">
+            <div class="card-base client-card">
+              <div class="flex-container flex-container--center">
+                <div class="img-container-base img-container--cliente1"></div>
+              </div>
+            </div>
+            <div class="card-base client-card">
+              <div class="flex-container flex-container--center">
+                <div class="img-container-base img-container--cliente2"></div>
+              </div>
+            </div>
+            <div class="card-base client-card">
+              <div class="flex-container flex-container--center">
+                <div class="img-container-base img-container--cliente3"></div>
+              </div>
+            </div>
+            <div class="card-base client-card">
+              <div class="flex-container flex-container--center">
+                <div class="img-container-base img-container--cliente4"></div>
+              </div>
+            </div>
+          </section>
+          <section class="card__clientes2">
+            <div class="img-container-clientes5"></div>
+          </section>
         </section>
-           
-            
-       </section>
-       <!--=============== CONTACTO ===============-->
-       <section class="contacto section" id="contacto">
-            <h2 class="contacto-title">FORMULARIO CONTACTO</h2>
+      </section>
+      <!--=============== CONTACTO ===============-->
+      <section class="contacto section" id="contacto">
+        <h2 class="contacto-title">FORMULARIO CONTACTO</h2>
 
-            <div class="contacto-container">
-                <div class="form-container">
-                    <form action="enviar.php" method="POST" class="contact-form">
-                        <div class="form-row form-doble">
-                            <div class="form-group form-name">
-                                <input type="text" placeholder="Nombre completo:" name="nombre" required>
-                            </div>
-                            <div class="form-group form-estado">
-                                <input type="text" placeholder="Estado:" name="estado" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group full-width">
-                                <input type="tel" placeholder="Número de Teléfono:" name="telefono" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group full-width">
-                                <input type="email" placeholder="Correo electrónico:" name="email" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group full-width">
-                                <input type="text" placeholder="Servicio o producto:" name="servicio">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group full-width">
-                                <textarea placeholder="Explícanos tu proyecto:" rows="5" name="asunto"></textarea>
-                            </div>
-                        </div>
-                        <div class="captcha-wrapper">
-                             <div class="g-recaptcha" data-sitekey="6LdVCNkrAAAAAO_TH-JAIm0Oe1q5O1bgo0fOOffO"></div>
-                        </div>
-                         
-                        <div class="btn-wrapper">
-                            <button type="submit" class="btn-enviar">Enviar</button>
-                        </div>
-                        
-
-                    </form>
+        <div class="contacto-container">
+          <div class="form-container">
+            <form action="enviar.php" method="POST" class="contact-form">
+              <div class="form-row form-doble">
+                <div class="form-group form-name">
+                  <input
+                    type="text"
+                    placeholder="Nombre completo:"
+                    name="nombre"
+                    required
+                  />
                 </div>
-
-                <div class="mapa-lado">
-                    <div class="mapa-container">
-                        <div class="mapa-placeholder">
-                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.8015206908385!2d-99.7969952027819!3d16.786547516916414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ca5bee8768aa9d%3A0xb32523d43089e053!2sBlvd.%20de%20las%20Naciones%20268%2C%20Playa%20Diamante%2C%2039897%20Acapulco%20de%20Ju%C3%A1rez%2C%20Gro.!5e0!3m2!1ses!2smx!4v1758737032431!5m2!1ses!2smx" width="100%" 
-                           height="100%" 
-                           style="border:0;" 
-                           allowfullscreen="" 
-                           loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                        </div>
-                    </div>
-
-                    <div class="info-contacto">
-                        <div class="info-item">
-                            <div class="icon-placeholder"> <img src="/images/Recurso1_max_aceros.png" alt="location"></div>
-                            <div>Boulevard de las Naciones #268, Colonia la Poza, CP. 39370 Acapulco Guerrero</div>
-                        </div>
-                    
-                        <div class="info-item">
-                            <div class="icon-placeholder"><img src="/images/Recurso2_max_aceros.png" alt="image2"></div>
-                            <div>(74) 4188 0224 &nbsp; (74) 4123 9552</div>
-                        </div>
-                    
-                        <div class="info-item">
-                            <div class="icon-placeholder"><img src="/images/Recurso3_max_aceros.png" alt="imagen3"></div>
-                            <div>contacto@maxaceros.com</div>
-                        </div>
-                    
-                        <div class="info-item">
-                            <div class="icon-placeholder"><img src="/images/Recurso4_max_aceros.png" alt="image4"></div>
-                            <div>Max Aceros Ferremayoreo</div>
-                        </div>
-                    </div>
+                <div class="form-group form-estado">
+                  <input
+                    type="text"
+                    placeholder="Estado:"
+                    name="estado"
+                    required
+                  />
                 </div>
+              </div>
 
-
-            </div>
-            <a href="https://wa.link/40vgpy" class="float" target="_blank">
-                 <i class="bi bi-whatsapp my-float"></i>
-            </a> 
-       </section>
-
-
-       <!--=============== FOOTER ===============-->
-       <section class="footer section" id="footer">
-            <div class="footer-container">
-                <a href="#" class="logo-lado">
-                    <img  src="/images/Logo_max_aceros.png" alt="">
-                </a>
-
-                <div class="luminel-lado">
-                    <div class="letra-container">
-                        <p>Diseñado por Luminel Agencia Creativa</p>
-                    </div>
-                    <a href="https://woah.pbxhosting.com.mx/" target="_blank" class="logo-luminel">
-                        <img src="/images/Logo_luminel.png" alt="">
-                    </a>
+              <div class="form-row">
+                <div class="form-group full-width">
+                  <input
+                    type="tel"
+                    placeholder="Número de Teléfono:"
+                    name="telefono"
+                    required
+                  />
                 </div>
-
-            </div>
-       </section>
-
-       <!--=============== SEGUNDA PARTE FOOTER  ===============-->
-       <section id="footer2">
-            <div class="footer2-container">
-                <div class="logos-continuos">
-                    <img src="/images/Logo_marca6_max_aceros.png" alt="">
-                    <img src="/images/Logo_marca7_max_aceros.png" alt="">
-                    <img src="/images/Logo_marca8_max_aceros.png" alt="">
-                    <img src="/images/Logo_marca9_max_aceros.png" alt="">
-                    <img src="/images/Logo_marca10_max_aceros.png" alt="">
-                    <img src="/images/Logo_marca11_max_aceros.png" alt="">
-                    <img src="/images/Logo_marca12_max_aceros.png" alt="">
-                    <img src="/images/Logo_marca13_max_aceros.png" alt="">
-                    <img src="/images/Logo_marca14_max_aceros.png" alt="">
-                    <img src="/images/Logo_marca15_max_aceros.png" alt="">
-                    <img src="/images/Logo_marca16_max_aceros.png" alt="">
-                    <img src="/images/Logo_marca17_max_aceros.png" alt="">
-                    <img src="/images/Logo_marca18_max_aceros.png" alt="">
-                    <img src="/images/Logo_marca19_max_aceros.png" alt="">
-                    <img src="/images/Logo_marca20_max_aceros.png" alt="">
-                    <img src="/images/Logo_marca21_max_aceros.png" alt="">
-                    <img src="/images/Logo_marca22_max_aceros.png" alt="">
+              </div>
+              <div class="form-row">
+                <div class="form-group full-width">
+                  <input
+                    type="email"
+                    placeholder="Correo electrónico:"
+                    name="email"
+                    required
+                  />
                 </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group full-width">
+                  <input
+                    type="text"
+                    placeholder="Servicio o producto:"
+                    name="servicio"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group full-width">
+                  <textarea
+                    placeholder="Explícanos tu proyecto:"
+                    rows="5"
+                    name="asunto"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="captcha-wrapper">
+                <div
+                  class="g-recaptcha"
+                  data-sitekey="6LdVCNkrAAAAAO_TH-JAIm0Oe1q5O1bgo0fOOffO"
+                ></div>
+              </div>
+
+              <div class="btn-wrapper">
+                <button type="submit" class="btn-enviar">Enviar</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="mapa-lado">
+            <div class="mapa-container">
+              <div class="mapa-placeholder">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.8015206908385!2d-99.7969952027819!3d16.786547516916414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ca5bee8768aa9d%3A0xb32523d43089e053!2sBlvd.%20de%20las%20Naciones%20268%2C%20Playa%20Diamante%2C%2039897%20Acapulco%20de%20Ju%C3%A1rez%2C%20Gro.!5e0!3m2!1ses!2smx!4v1758737032431!5m2!1ses!2smx"
+                  width="100%"
+                  height="100%"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
+              </div>
             </div>
 
-       </section>
+            <div class="info-contacto">
+              <div class="info-item">
+                <div class="icon-placeholder">
+                  <img src="/images/Recurso1_max_aceros.png" alt="location" />
+                </div>
+                <div>
+                  Boulevard de las Naciones #268, Colonia la Poza, CP. 39370
+                  Acapulco Guerrero
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="icon-placeholder">
+                  <img src="/images/Recurso2_max_aceros.png" alt="image2" />
+                </div>
+                <div>(74) 4188 0224 &nbsp; (74) 4123 9552</div>
+              </div>
+
+              <div class="info-item">
+                <div class="icon-placeholder">
+                  <img src="/images/Recurso3_max_aceros.png" alt="imagen3" />
+                </div>
+                <div>contacto@maxaceros.com</div>
+              </div>
+
+              <div class="info-item">
+                <div class="icon-placeholder">
+                  <img src="/images/Recurso4_max_aceros.png" alt="image4" />
+                </div>
+                <div>Max Aceros Ferremayoreo</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="https://wa.link/40vgpy" class="float" target="_blank">
+          <i class="bi bi-whatsapp my-float"></i>
+        </a>
+      </section>
+
+      <!--=============== FOOTER ===============-->
+      <section class="footer section" id="footer">
+        <div class="footer-container">
+          <a href="#" class="logo-lado">
+            <img src="/images/Logo_max_aceros.png" alt="" />
+          </a>
+
+          <div class="luminel-lado">
+            <div class="letra-container">
+              <p>Diseñado por Luminel Agencia Creativa</p>
+            </div>
+            <a
+              href="https://woah.pbxhosting.com.mx/"
+              target="_blank"
+              class="logo-luminel"
+            >
+              <img src="/images/Logo_luminel.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== SEGUNDA PARTE FOOTER  ===============-->
+      <section id="footer2">
+        <div class="footer2-container">
+          <div class="logos-continuos">
+            <img src="/images/Logo_marca6_max_aceros.png" alt="" />
+            <img src="/images/Logo_marca7_max_aceros.png" alt="" />
+            <img src="/images/Logo_marca8_max_aceros.png" alt="" />
+            <img src="/images/Logo_marca9_max_aceros.png" alt="" />
+            <img src="/images/Logo_marca10_max_aceros.png" alt="" />
+            <img src="/images/Logo_marca11_max_aceros.png" alt="" />
+            <img src="/images/Logo_marca12_max_aceros.png" alt="" />
+            <img src="/images/Logo_marca13_max_aceros.png" alt="" />
+            <img src="/images/Logo_marca14_max_aceros.png" alt="" />
+            <img src="/images/Logo_marca15_max_aceros.png" alt="" />
+            <img src="/images/Logo_marca16_max_aceros.png" alt="" />
+            <img src="/images/Logo_marca17_max_aceros.png" alt="" />
+            <img src="/images/Logo_marca18_max_aceros.png" alt="" />
+            <img src="/images/Logo_marca19_max_aceros.png" alt="" />
+            <img src="/images/Logo_marca20_max_aceros.png" alt="" />
+            <img src="/images/Logo_marca21_max_aceros.png" alt="" />
+            <img src="/images/Logo_marca22_max_aceros.png" alt="" />
+          </div>
+        </div>
+      </section>
     </main>
-    
 
     <!--=============== SWIPER JS ===============-->
     <script src="/js/swiper-bundle.min.js"></script>
 
     <script src="/js/scrollreveal.min.js"></script>
     <!--=============== MAIN JS ===============-->
-        <script src="js/main.js"></script>
-        
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-</body>
+    <script src="js/main.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </body>
 </html>
