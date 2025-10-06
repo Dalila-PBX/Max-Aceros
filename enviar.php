@@ -40,7 +40,6 @@ if($_POST['g-recaptcha-response'] == null || !isset($_POST['g-recaptcha-response
 
     if($result->success){
         $to = 'contacto@maxaceros.com';
-        // $to = 'ventas@almesag.com.mx';
         $subject = 'Formulario de contacto';
 
 
