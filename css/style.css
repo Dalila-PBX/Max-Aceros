@@ -334,6 +334,7 @@ section[id] {
 #tuberias .productos__img {
   background-size: cover; /*OCUPE TODO EL ESPACIO DISPONIBLE */
   background-position: center center; /*LA IMAGEN SIEMPRE QUEDA CENTRADA */
+  background: var(--grey-color);
 }
 
 .section__subtitle {
@@ -364,7 +365,7 @@ section[id] {
   margin: 0 auto;
   height: 344px;
   background-color: var(--first-color);
-  border: 2px solid var(--gray-border);
+  /* border: 2px solid var(--gray-border); */
   background-clip: content-box;
   transition: border-color 0.4s;
   display: flex;
