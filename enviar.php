@@ -39,7 +39,7 @@ if($_POST['g-recaptcha-response'] == null || !isset($_POST['g-recaptcha-response
     $result = json_decode($result);
 
     if($result->success){
-        $to = 'csantiago.pbxhosting@gmail.com';
+        $to = 'contacto@maxaceros.com';
         // $to = 'ventas@almesag.com.mx';
         $subject = 'Formulario de contacto';
 
